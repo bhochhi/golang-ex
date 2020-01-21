@@ -179,7 +179,7 @@
     {
       "name": "APPLICATION_DOMAIN",
       "description": "The exposed hostname that will route to the Beego service",
-      "value": "beego-example.openshiftapps.com"
+      "value": "beego-example.bhochhiapps.com"
     },
     {
       "name": "GITHUB_WEBHOOK_SECRET",

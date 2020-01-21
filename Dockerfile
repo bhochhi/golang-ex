@@ -2,10 +2,8 @@ FROM golang:1.11
 
 USER ROOT
 
-RUN mkdir -p /go/src/github.com/bhochhi/golang-ex
-WORKDIR /go/src/github.com/bhochhi/golang-ex
+WORKDIR /go/src/app
 
-COPY . /go/src/github.com/bhochhi/golang-ex
-RUN go build
-
-CMD ["./golang-ex"]
+COPY . ./
+RUN go install
+RUN ldd /go/bin/app | grep -q "not a dynamic executable"
