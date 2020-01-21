@@ -1,11 +1,11 @@
 FROM golang:1.11
 
-USER nobody
+USER ROOT
 
-RUN mkdir -p /go/src/github.com/openshift/golang-ex
-WORKDIR /go/src/github.com/openshift/golang-ex
+RUN mkdir -p /go/src/github.com/bhochhi/golang-ex
+WORKDIR /go/src/github.com/bhochhi/golang-ex
 
-COPY . /go/src/github.com/openshift/golang-ex
+COPY . /go/src/github.com/bhochhi/golang-ex
 RUN go build
 
 CMD ["./golang-ex"]
